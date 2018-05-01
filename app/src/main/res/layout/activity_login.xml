@@ -22,6 +22,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:digits="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
             style="@style/CommonEditViewStyle"
             />
 
@@ -41,6 +42,7 @@
             android:id="@+id/et_password"
             android:layout_weight="1"
             android:layout_width="0dp"
+            android:inputType="textPassword"
             android:layout_height="wrap_content"
             style="@style/CommonEditViewStyle"
             />
@@ -66,7 +68,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="立即注册？"/>
+        <TextView
+            android:id="@+id/tv_check_version"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检查升级"/>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本号:"/>
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="@dimen/one_hundred"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </LinearLayout>

@@ -24,4 +24,8 @@ public interface ApiServer {
    @FormUrlEncoded
    Observable<BaseResponse> doRegister(@FieldMap Map<String,Object> map);
 
+   @POST("CheckSoftUpgrade")
+   @FormUrlEncoded
+   Observable<BaseResponse> checkSoftUpgrade(@Field("serverCode") String serverCode,@Field("versionCode") String versionCode);
+
 }

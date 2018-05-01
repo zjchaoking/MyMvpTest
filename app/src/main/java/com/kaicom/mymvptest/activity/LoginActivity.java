@@ -35,6 +35,10 @@ public class LoginActivity extends BaseActivity {
     Button btnLogin;
     @BindView(R.id.tv_register)
     TextView tvRegister;
+    @BindView(R.id.tv_check_version)
+    TextView tvCheckVersion;
+    @BindView(R.id.tv_version)
+    TextView tvVersion;
 
     @Override
     protected int getViewId() {
@@ -43,10 +47,11 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void init() {
+        tvVersion.setText(ApkUtil.getVersionName());
 
     }
 
-    @OnClick({R.id.btn_login, R.id.tv_register})
+    @OnClick({R.id.btn_login, R.id.tv_register, R.id.tv_check_version})
     void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_login:
@@ -55,19 +60,52 @@ public class LoginActivity extends BaseActivity {
             case R.id.tv_register:
                 doRegister();
                 break;
+            case R.id.tv_check_version:
+                checkVersionCode();
+                break;
 
         }
     }
 
     /**
+     * 检查软件版本号
+     */
+    private void checkVersionCode() {
+        RetrofitManager.getInstance().checkSoftUpgrade("10003",ApkUtil.getVersionName())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<BaseResponse>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(BaseResponse value) {
+                        ToastTools.showToast(value.getErrorMsg());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        ToastTools.showToast("请求异常：" + e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    /**
      * 注册
      */
-    private void  doRegister() {
-        if(StringUtil.isEmpty(etUsername.getText().toString())){
+    private void doRegister() {
+        if (StringUtil.isEmpty(etUsername.getText().toString())) {
             ToastTools.showToast("请先填写用户名!");
             return;
         }
-        if(StringUtil.isEmpty(etPassword.getText().toString())){
+        if (StringUtil.isEmpty(etPassword.getText().toString())) {
             ToastTools.showToast("请先填写密码!");
             return;
         }
@@ -98,11 +136,11 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void doLogin() {
-        if(StringUtil.isEmpty(etUsername.getText().toString())){
+        if (StringUtil.isEmpty(etUsername.getText().toString())) {
             ToastTools.showToast("请先填写用户名!");
             return;
         }
-        if(StringUtil.isEmpty(etPassword.getText().toString())){
+        if (StringUtil.isEmpty(etPassword.getText().toString())) {
             ToastTools.showToast("请先填写密码!");
             return;
         }
@@ -158,4 +196,5 @@ public class LoginActivity extends BaseActivity {
         super.onBackPressed();
         ApkUtil.exit();
     }
+
 }
