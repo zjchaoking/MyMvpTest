@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- 通用cardview样式属性 -->
+    <style name="CardViewStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/sixty</item>
+    </style>
+    <!-- 通用Button样式属性 -->
+    <style name="CommonButtonStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+    <!-- 通用EditView样式属性 -->
+    <style name="CommonEditViewStyle">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:maxLength">15</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- 通用TextView样式属性 -->
+    <style name="CommonTextViewStyle">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+</resources>

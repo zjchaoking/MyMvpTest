@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 18
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/commons-net-3.0.1.jar')
+    compile files('libs/daocore.jar')
+    compile files('libs/ExceptionLib.jar')
+    compile files('libs/kaicomApp.jar')
+    compile files('libs/pdahelper.jar')
+    compile files('libs/simple-xml-2.7.1.jar')
+    compile files('libs/SpeechApi.jar')
+}

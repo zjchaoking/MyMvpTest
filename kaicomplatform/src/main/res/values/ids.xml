@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 初始连接成功值 -->
+    <item name="connect_success" type="id"/>
+    <!-- 蓝牙正在连接 -->
+    <item name="connecting" type="id"/>
+    <!-- 蓝牙连接失败 -->
+    <item name="connect_fail" type="id"/>
+    <!-- 蓝牙读数据失败 -->
+    <item name="read_fail" type="id"/>
+    <!-- 蓝牙未打开蓝牙设备 -->
+    <item name="no_open" type="id"/>
+
+</resources>

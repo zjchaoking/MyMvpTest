@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\start_btn_normal.9.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\start_btn_normal.9.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\welcome.jpg",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\welcome.jpg"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\s_top_bg.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\s_top_bg.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\point_normal.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\point_normal.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\start_btn_focus.9.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\start_btn_focus.9.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\start_btn_pressed.9.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\start_btn_pressed.9.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\point_selected.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\point_selected.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ic_launcher.png"
+    }
+]

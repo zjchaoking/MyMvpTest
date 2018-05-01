@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\requirement_config.properties",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\requirement_config.properties"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\beep.ogg",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\beep.ogg"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\pic_upload_failure.wav",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\pic_upload_failure.wav"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\upload_failure.wav",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\upload_failure.wav"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\key.wav",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\key.wav"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\photo.wav",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\photo.wav"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\scan_abnormal.wav",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\scan_abnormal.wav"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\warn_sound.wav",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\warn_sound.wav"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\repeat_scan_abnormal.wav",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\repeat_scan_abnormal.wav"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\scan_normal.ogg",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\raw\\scan_normal.ogg"
+    }
+]

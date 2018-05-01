@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <com.kaicom.api.view.edittext.DeLBackEditText
+        android:id="@+id/editTextUniqueCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="177dp"
+        android:textSize="16sp"
+        android:ems="15"
+        android:hint="@string/unique_code_hint"
+        android:inputType="phone"
+        android:maxLength="15" >
+
+        <requestFocus />
+    </com.kaicom.api.view.edittext.DeLBackEditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextUniqueCode"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="40dp"
+        android:textSize="18sp"
+        android:text="@string/input_unique_code" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextUniqueCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/confirm" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:textSize="18sp"
+        android:layout_alignRight="@+id/editTextUniqueCode"
+        android:text="@string/unique_code_max_length" />
+
+    <TextView
+        android:id="@+id/textViewInputLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:textSize="18sp"
+        android:layout_toLeftOf="@+id/textView1"
+        android:text="0" />
+
+</RelativeLayout>

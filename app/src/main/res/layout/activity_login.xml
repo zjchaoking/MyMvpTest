@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kaicom.mymvptest.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fifty"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:text="用户名:"
+            style="@style/CommonTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/CommonEditViewStyle"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fifty"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:text="密    码:"
+            style="@style/CommonTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/CommonEditViewStyle"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fifty"
+        android:gravity="center"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/one_hundred"
+        android:layout_height="wrap_content"
+        style="@style/CommonButtonStyle"
+        android:text="登录"/>
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即注册？"/>
+
+    </LinearLayout>
+
+</LinearLayout>

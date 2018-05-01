@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_qr_scan.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_qr_scan.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\screen_lock_layout.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\layout\\screen_lock_layout.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camera_layout.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\layout\\camera_layout.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\kl_unique_code_layout.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\layout\\kl_unique_code_layout.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\guide_layout.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\layout\\guide_layout.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_main.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\std_adapter_item.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\layout\\std_adapter_item.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\test_ftp_main.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\layout\\test_ftp_main.xml"
+    }
+]

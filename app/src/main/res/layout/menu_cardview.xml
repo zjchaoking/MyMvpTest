@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/ten"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/fifteen"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/eight">
+
+            <ImageView
+                android:layout_width="@dimen/tweenty"
+                android:layout_height="@dimen/tweenty"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginTop="@dimen/two"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_bike_history" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tweenty"
+                android:layout_marginTop="@dimen/two"
+                android:clickable="true"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/tweenty"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginTop="@dimen/two"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_clock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/two"
+                android:clickable="true"
+                android:textColor="@color/grey"
+                android:text="时间:"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/two"
+                android:textColor="@color/grey"
+                android:clickable="true"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

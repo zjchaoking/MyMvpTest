@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scan_mask.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scan_mask.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\capture.9.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\capture.9.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scan_line.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scan_line.png"
+    }
+]

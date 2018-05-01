@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\start_btn_selector.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable\\start_btn_selector.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\point_img.xml",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable\\point_img.xml"
+    },
+    {
+        "merged": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification.png",
+        "source": "E:\\StudioWorkspace\\MyMvpTest\\kaicomplatform\\build\\intermediates\\bundles\\debug\\res\\drawable\\notification.png"
+    }
+]

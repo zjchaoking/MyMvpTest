@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DelBackEditText"><attr format="boolean" name="interceptKeyUp"/><attr format="boolean" name="interceptKeyDown"/><attr format="boolean" name="interceptKeyLeft"/><attr format="boolean" name="interceptKeyRight"/></declare-styleable>
+    <declare-styleable name="StdEditText"><attr format="integer" name="maxByteLength"/><attr format="boolean" name="showSoftKeyboard"/><attr format="boolean" name="hideImeWithLostFocus"/><attr format="integer" name="rawInputType">
+            
+            <enum name="number" value="0x00000003"/>
+            <enum name="text" value="0x00000001"/>
+        </attr></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="connect_fail" type="id"/>
+    <item name="connect_success" type="id"/>
+    <item name="connecting" type="id"/>
+    <item name="no_open" type="id"/>
+    <item name="read_fail" type="id"/>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">KaicomFramework</string>
+    <string name="back_btn">返回</string>
+    <string name="confirm">确定</string>
+    <string name="flash_light">闪光灯</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="input_unique_code">请输入唯一码</string>
+    <string name="notif_server_starting">启动于 %s 端口</string>
+    <string name="notif_stop_text">Stop server</string>
+    <string name="notif_text">服务运行于 %s 端口</string>
+    <string name="notif_title">FTP Server 正在运行</string>
+    <string name="retake_photo">重拍</string>
+    <string name="save">保存</string>
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+    <string name="start">开始</string>
+    <string name="storage_warning">警告：当前存储暂不可用，您可能需要取消挂载。</string>
+    <string name="take_photo">拍照</string>
+    <string name="unique_code_hint">15位数字</string>
+    <string name="unique_code_max_length">/15</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>
