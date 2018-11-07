@@ -3,6 +3,7 @@ package com.kaicom.mymvptest;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.kaicom.api.KaicomApplication;
+import com.kaicom.api.log.CrashHandler;
 import com.kaicom.api.util.FileUtil;
 import com.kaicom.mymvptest.activity.LoginActivity;
 import com.kaicom.mymvptest.datasource.DataSourceHelper;
@@ -28,7 +29,6 @@ public class MyMvpApplication extends KaicomApplication {
     public void onCreate() {
         super.onCreate();
         app = this;
-
     }
 
     @Override

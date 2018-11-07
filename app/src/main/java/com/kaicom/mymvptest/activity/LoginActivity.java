@@ -1,6 +1,7 @@
 package com.kaicom.mymvptest.activity;
 
 
+import android.content.DialogInterface;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -8,11 +9,13 @@ import android.widget.TextView;
 
 import com.kaicom.api.util.ApkUtil;
 import com.kaicom.api.util.StringUtil;
+import com.kaicom.api.view.dialog.DialogTools;
 import com.kaicom.api.view.toast.ToastTools;
 import com.kaicom.mymvptest.R;
 import com.kaicom.mymvptest.base.BaseActivity;
 import com.kaicom.mymvptest.network.RetrofitManager;
 import com.kaicom.mymvptest.network.response.BaseResponse;
+import com.kaicom.mymvptest.network.response.CheckSoftUpgradeResponse;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -71,23 +74,32 @@ public class LoginActivity extends BaseActivity {
      * 检查软件版本号
      */
     private void checkVersionCode() {
-        RetrofitManager.getInstance().checkSoftUpgrade("10003",ApkUtil.getVersionName())
+        RetrofitManager.getInstance().checkSoftUpgrade("10003", ApkUtil.getVersionName())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<BaseResponse>() {
+                .subscribe(new Observer<CheckSoftUpgradeResponse>() {
                     @Override
                     public void onSubscribe(Disposable d) {
 
                     }
 
                     @Override
-                    public void onNext(BaseResponse value) {
-                        ToastTools.showToast(value.getErrorMsg());
+                    public void onNext(final CheckSoftUpgradeResponse value) {
+                        if (value.isSuccess()) {
+                            DialogTools.showDialog(LoginActivity.this, "有新版本，是否更新？", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    downApk(value.getResult().getFileName());
+                                }
+                            });
+                        } else {
+                            ToastTools.showLazzToast(value.getErrorMsg());
+                        }
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        ToastTools.showToast("请求异常：" + e.getMessage());
+                        ToastTools.showLazzToast("请求异常：" + e.getMessage());
                     }
 
                     @Override
@@ -97,16 +109,61 @@ public class LoginActivity extends BaseActivity {
                 });
     }
 
-    /**
-     * 注册
-     */
+    private void downApk(String fileName) {
+//        final String filePath = SDPATH + fileName;
+//        RetrofitManager.getInstance().doSoftUpgrade("10004")
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .map(new Function<ResponseBody, InputStream>() {
+//                    @Override
+//                    public InputStream apply(ResponseBody responseBody) throws Exception {
+//                        return responseBody.byteStream();
+//                    }
+//                })
+//                .observeOn(Schedulers.computation()) // 用于计算任务
+//                .doOnNext(new Consumer<InputStream>() {
+//                    @Override
+//                    public void accept(InputStream inputStream) throws Exception {
+//                        FileUtil.writeFile(filePath, inputStream);
+//                    }
+//                })
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Observer<InputStream>() {
+//                    @Override
+//                    public void onSubscribe(Disposable d) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onNext(InputStream value) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        ToastTools.showLazzToast(e.getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onComplete() {
+//
+//                    }
+//                });
+
+
+        }
+
+        /**
+         * 注册
+         */
+
     private void doRegister() {
         if (StringUtil.isEmpty(etUsername.getText().toString())) {
-            ToastTools.showToast("请先填写用户名!");
+            ToastTools.showLazzToast("请先填写用户名!");
             return;
         }
         if (StringUtil.isEmpty(etPassword.getText().toString())) {
-            ToastTools.showToast("请先填写密码!");
+            ToastTools.showLazzToast("请先填写密码!");
             return;
         }
         RetrofitManager.getInstance().doRegister(getRegisterRequest())
@@ -120,12 +177,12 @@ public class LoginActivity extends BaseActivity {
 
                     @Override
                     public void onNext(BaseResponse value) {
-                        ToastTools.showToast(value.getErrorMsg());
+                        ToastTools.showLazzToast(value.getErrorMsg());
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        ToastTools.showToast("请求异常：" + e.getMessage());
+                        ToastTools.showLazzToast("请求异常：" + e.getMessage());
                     }
 
                     @Override
@@ -137,11 +194,11 @@ public class LoginActivity extends BaseActivity {
 
     private void doLogin() {
         if (StringUtil.isEmpty(etUsername.getText().toString())) {
-            ToastTools.showToast("请先填写用户名!");
+            ToastTools.showLazzToast("请先填写用户名!");
             return;
         }
         if (StringUtil.isEmpty(etPassword.getText().toString())) {
-            ToastTools.showToast("请先填写密码!");
+            ToastTools.showLazzToast("请先填写密码!");
             return;
         }
         RetrofitManager.getInstance().doLogin(getLoginRequest())
@@ -157,15 +214,15 @@ public class LoginActivity extends BaseActivity {
                     public void onNext(BaseResponse value) {
                         if (value.isSuccess()) {
                             toNextActivity(MainsActivity.class);
-                            ToastTools.showToast("登录成功！");
+                            ToastTools.showLazzToast("登录成功！");
                         } else {
-                            ToastTools.showToast(value.getErrorMsg());
+                            ToastTools.showLazzToast(value.getErrorMsg());
                         }
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        ToastTools.showToast("请求异常：" + e.getMessage());
+                        ToastTools.showLazzToast("请求异常：" + e.getMessage());
                     }
 
                     @Override

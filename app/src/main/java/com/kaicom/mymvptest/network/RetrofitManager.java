@@ -40,6 +40,27 @@ public class RetrofitManager {
         OkHttpClient  okHttpClient= new OkHttpClient.Builder()
                 .readTimeout(10, TimeUnit.SECONDS)
                 .connectTimeout(10,TimeUnit.SECONDS)
+                .addInterceptor(new JsDownloadInterceptor(new JsDownloadListener() {
+                    @Override
+                    public void onStartDownload() {
+
+                    }
+
+                    @Override
+                    public void onProgress(int progress) {
+
+                    }
+
+                    @Override
+                    public void onFinishDownload() {
+
+                    }
+
+                    @Override
+                    public void onFail(String errorInfo) {
+
+                    }
+                }))
                 .build();
         return okHttpClient;
     }
