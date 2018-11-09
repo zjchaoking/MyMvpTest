@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitManager {
     private static RetrofitManager retrofitManager;
     private static Retrofit retrofit;
-    private String url = "http://chaoking.51vip.biz/MyTestWebProject/";
+    private String url = "http://95.169.15.203:8080/TestWebProject/";
 
     private RetrofitManager() {
         if (retrofit == null) {

@@ -1,5 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
+ext {
+    // Sdk and tools
+    minSdkVersion = 19
+    targetSdkVersion = 21
+    compileSdkVersion = 27
+}
 buildscript {
     repositories {
         jcenter()

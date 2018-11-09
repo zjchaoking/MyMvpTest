@@ -22,7 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="android:icon, android:theme">
+        tools:replace="android:icon,android:label, android:theme">
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="7c04b493c258a0e6c0c01bc31da47343" />
