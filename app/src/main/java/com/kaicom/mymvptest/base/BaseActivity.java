@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.kaicom.mymvptest.R;
 import com.kaicom.mymvptest.datasource.TraceRecordsOper;
+import com.kaicom.mymvptest.utils.DialogUtil;
 import com.kaicom.mymvptest.utils.StatusBarUtil;
 
 import butterknife.ButterKnife;
@@ -32,6 +33,7 @@ public abstract class BaseActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(getViewId());
         ButterKnife.bind(this);
+        DialogUtil.context = this;
         //设置状态栏透明
 //        setStatusBarColor();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);

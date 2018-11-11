@@ -16,6 +16,7 @@ import com.kaicom.mymvptest.base.BaseActivity;
 import com.kaicom.mymvptest.network.RetrofitManager;
 import com.kaicom.mymvptest.network.response.BaseResponse;
 import com.kaicom.mymvptest.network.response.CheckSoftUpgradeResponse;
+import com.kaicom.mymvptest.utils.DialogUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +52,6 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void init() {
         tvVersion.setText(ApkUtil.getVersionName());
-
     }
 
     @OnClick({R.id.btn_login, R.id.tv_register, R.id.tv_check_version})
@@ -93,13 +93,13 @@ public class LoginActivity extends BaseActivity {
                                 }
                             });
                         } else {
-                            ToastTools.showLazzToast(value.getErrorMsg());
+                            DialogUtil.showSingleDialog(value.getErrorMsg());
                         }
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        ToastTools.showLazzToast("请求异常：" + e.getMessage());
+                        DialogUtil.showSingleDialog("请求异常：" + e.getMessage());
                     }
 
                     @Override
@@ -141,7 +141,7 @@ public class LoginActivity extends BaseActivity {
 //
 //                    @Override
 //                    public void onError(Throwable e) {
-//                        ToastTools.showLazzToast(e.getMessage());
+//                        DialogUtil.showSingleDialog(e.getMessage());
 //                    }
 //
 //                    @Override
@@ -159,13 +159,14 @@ public class LoginActivity extends BaseActivity {
 
     private void doRegister() {
         if (StringUtil.isEmpty(etUsername.getText().toString())) {
-            ToastTools.showLazzToast("请先填写用户名!");
+            DialogUtil.showSingleDialog("请先填写用户名!");
             return;
         }
         if (StringUtil.isEmpty(etPassword.getText().toString())) {
-            ToastTools.showLazzToast("请先填写密码!");
+            DialogUtil.showSingleDialog("请先填写密码!");
             return;
         }
+        DialogUtil.showLoadingDialog("正在注册...",false);
         RetrofitManager.getInstance().doRegister(getRegisterRequest())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -177,12 +178,14 @@ public class LoginActivity extends BaseActivity {
 
                     @Override
                     public void onNext(BaseResponse value) {
+                        DialogUtil.dismissLoadingDialog();
                         ToastTools.showLazzToast(value.getErrorMsg());
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        ToastTools.showLazzToast("请求异常：" + e.getMessage());
+                        DialogUtil.dismissLoadingDialog();
+                        DialogUtil.showSingleDialog("请求异常：" + e.getMessage());
                     }
 
                     @Override
@@ -194,13 +197,14 @@ public class LoginActivity extends BaseActivity {
 
     private void doLogin() {
         if (StringUtil.isEmpty(etUsername.getText().toString())) {
-            ToastTools.showLazzToast("请先填写用户名!");
+            DialogUtil.showSingleDialog("请先填写用户名!");
             return;
         }
         if (StringUtil.isEmpty(etPassword.getText().toString())) {
-            ToastTools.showLazzToast("请先填写密码!");
+            DialogUtil.showSingleDialog("请先填写密码!");
             return;
         }
+        DialogUtil.showLoadingDialog("正在登录...",false);
         RetrofitManager.getInstance().doLogin(getLoginRequest())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -212,17 +216,19 @@ public class LoginActivity extends BaseActivity {
 
                     @Override
                     public void onNext(BaseResponse value) {
+                        DialogUtil.dismissLoadingDialog();
                         if (value.isSuccess()) {
                             toNextActivity(MainsActivity.class);
                             ToastTools.showLazzToast("登录成功！");
                         } else {
-                            ToastTools.showLazzToast(value.getErrorMsg());
+                            DialogUtil.showSingleDialog(value.getErrorMsg());
                         }
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        ToastTools.showLazzToast("请求异常：" + e.getMessage());
+                        DialogUtil.dismissLoadingDialog();
+                        DialogUtil.showSingleDialog("请求异常：" + e.getMessage());
                     }
 
                     @Override
