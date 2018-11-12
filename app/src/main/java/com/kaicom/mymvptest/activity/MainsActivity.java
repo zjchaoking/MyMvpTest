@@ -18,10 +18,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.kaicom.api.util.ApkUtil;
+import com.kaicom.api.view.toast.ToastTools;
 import com.kaicom.mymvptest.R;
+import com.kaicom.mymvptest.utils.DialogUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -31,6 +32,8 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -152,7 +155,7 @@ public class MainsActivity extends AppCompatActivity
                             requestCode);
                 } else {
                     //已经获得权限，则执行定位请求。
-                    Toast.makeText(this, "已获取定位权限", Toast.LENGTH_SHORT).show();
+                    ToastTools.showLazzToast( "已获取定位权限");
                     //请求SD卡读写权限
                     checkPermission(STORAGE_PERMISSION_CODE);
                 }
@@ -168,7 +171,7 @@ public class MainsActivity extends AppCompatActivity
                             requestCode);
                 } else {
                     //已经获得权限，则执行定位请求。
-                    Toast.makeText(this, "已获取SD卡读写权限", Toast.LENGTH_SHORT).show();
+                    ToastTools.showLazzToast( "已获取SD卡读写权限");
                     initLogFolds();
                 }
                 break;
@@ -190,7 +193,7 @@ public class MainsActivity extends AppCompatActivity
         switch (requestCode) {
             case LOCATION_PERMISSION_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "定位权限已获取", Toast.LENGTH_SHORT).show();
+                    ToastTools.showLazzToast( "定位权限已获取");
                     //请求SD卡读写权限
                     checkPermission(STORAGE_PERMISSION_CODE);
                 } else {
@@ -199,7 +202,7 @@ public class MainsActivity extends AppCompatActivity
                 break;
             case STORAGE_PERMISSION_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "SD卡读写权限已获取", Toast.LENGTH_SHORT).show();
+                    ToastTools.showLazzToast( "SD卡读写权限已获取");
                     initLogFolds();
                 } else {
                     ApkUtil.exit();
@@ -216,7 +219,12 @@ public class MainsActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            finish();
+            DialogUtil.showWarnDialog("确认要退出登陆吗？",true, new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                    finish();
+                }
+            });
         }
     }
 

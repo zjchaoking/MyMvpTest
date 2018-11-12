@@ -57,6 +57,13 @@ public class DialogUtil {
         loadingDialog.setCancelable(isCancelable);
         loadingDialog.show();
     }
+
+    /**
+     *
+     * @param errorMsg
+     * @param isShowCancelButton  是否显示取消按钮
+     * @param listener
+     */
     public static void showWarnDialog(String errorMsg, boolean isShowCancelButton, final SweetAlertDialog.OnSweetClickListener listener){
         SweetAlertDialog dialog = new SweetAlertDialog(context,SweetAlertDialog.ERROR_TYPE);
         dialog.setTitleText("警告");
@@ -73,6 +80,15 @@ public class DialogUtil {
             }
         });
         dialog.show();
+    }
+
+    /**
+     * 两个按钮的对话框
+     * @param errorMsg
+     * @param listener
+     */
+    public static void showWarnDialog(String errorMsg, final SweetAlertDialog.OnSweetClickListener listener){
+        showWarnDialog(errorMsg,true,listener);
     }
 
     public static void dismissLoadingDialog(){
