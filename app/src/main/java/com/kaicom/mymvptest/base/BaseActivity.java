@@ -33,7 +33,6 @@ public abstract class BaseActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(getViewId());
         ButterKnife.bind(this);
-        DialogUtil.context = this;
         //设置状态栏透明
 //        setStatusBarColor();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -107,6 +106,7 @@ public abstract class BaseActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        DialogUtil.context = this;
     }
 
     @Override

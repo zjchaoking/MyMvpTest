@@ -255,6 +255,13 @@ public class LoginActivity extends BaseActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        etUsername.setText("jin");
+        etPassword.setText("123456");
+    }
+
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         ApkUtil.exit();
