@@ -29,6 +29,14 @@
         <item name="android:background">@drawable/btn_selector</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
+    <!-- tab按钮样式属性 -->
+    <style name="TabButtonStyle">
+        <item name="android:layout_height">@dimen/fifty</item>
+        <item name="android:layout_width">@dimen/zero</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/zero</item>
+    </style>
     <!-- 通用EditView样式属性 -->
     <style name="CommonEditViewStyle">
         <item name="android:foreground">?android:attr/selectableItemBackground</item>

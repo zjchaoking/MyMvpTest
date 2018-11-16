@@ -218,7 +218,7 @@ public class LoginActivity extends BaseActivity {
                     public void onNext(BaseResponse value) {
                         DialogUtil.dismissLoadingDialog();
                         if (value.isSuccess()) {
-                            toNextActivity(MainsActivity.class);
+                            toNextActivity(MainMenuActivity.class);
                             ToastTools.showLazzToast("登录成功！");
                         } else {
                             DialogUtil.showSingleDialog(value.getErrorMsg());

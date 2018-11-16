@@ -1,12 +1,13 @@
 package com.kaicom.mymvptest.base;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +22,7 @@ import butterknife.ButterKnife;
  * Created by jc on 2017/8/29.
  */
 
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends FragmentActivity {
 
     private ImageView ivBack;//头部返回按钮
     private TextView tvTitle,tvRightText;
@@ -30,12 +31,14 @@ public abstract class BaseActivity extends Activity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN
+                |WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         setContentView(getViewId());
         ButterKnife.bind(this);
         //设置状态栏透明
-//        setStatusBarColor();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setStatusBarColor();
         traceRecordsOper = new TraceRecordsOper();
         initView();
         initListeners();
@@ -73,7 +76,8 @@ public abstract class BaseActivity extends Activity {
     }
 
     private void setStatusBarColor() {
-        StatusBarUtil.setTransparent(this);
+//        StatusBarUtil.setTransparent(this);
+        StatusBarUtil.setTranslucent(this,1);
     }
 
     protected abstract int getViewId();
