@@ -1,4 +1,4 @@
-package com.kaicom.mymvptest.activity;
+package com.kaicom.mymvptest.ui.activity;
 
 import android.net.Uri;
 import android.support.v4.app.Fragment;
@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.kaicom.mymvptest.R;
-import com.kaicom.mymvptest.adapters.ViewPagerAdapter;
+import com.kaicom.mymvptest.ui.adapters.ViewPagerAdapter;
 import com.kaicom.mymvptest.base.BaseActivity;
-import com.kaicom.mymvptest.fragment.IndexFragment;
-import com.kaicom.mymvptest.fragment.MeFragment;
+import com.kaicom.mymvptest.ui.fragment.IndexFragment;
+import com.kaicom.mymvptest.ui.fragment.MeFragment;
 import com.kaicom.mymvptest.inerface.OnFragmentInteractionListener;
 
 import java.util.ArrayList;

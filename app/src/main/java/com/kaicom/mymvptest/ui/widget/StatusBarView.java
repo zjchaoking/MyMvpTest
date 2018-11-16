@@ -1,4 +1,4 @@
-package com.kaicom.mymvptest.widget;
+package com.kaicom.mymvptest.ui.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

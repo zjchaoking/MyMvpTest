@@ -1,4 +1,4 @@
-package com.kaicom.mymvptest.adapters;
+package com.kaicom.mymvptest.ui.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

@@ -3,9 +3,8 @@ package com.kaicom.mymvptest;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.kaicom.api.KaicomApplication;
-import com.kaicom.api.log.CrashHandler;
 import com.kaicom.api.util.FileUtil;
-import com.kaicom.mymvptest.activity.LoginActivity;
+import com.kaicom.mymvptest.ui.activity.LoginActivity;
 import com.kaicom.mymvptest.datasource.DataSourceHelper;
 import com.kaicom.mymvptest.datasource.gen.DaoMaster;
 import com.kaicom.mymvptest.datasource.gen.DaoSession;

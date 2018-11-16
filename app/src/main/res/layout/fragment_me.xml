@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context="com.kaicom.mymvptest.fragment.MeFragment">
+    tools:context="com.kaicom.mymvptest.ui.fragment.MeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

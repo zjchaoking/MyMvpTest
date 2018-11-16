@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.kaicom.mymvptest.activity.TraceRecordsActivity">
+    tools:context="com.kaicom.mymvptest.ui.activity.TraceRecordsActivity">
 
     <include layout="@layout/head_layout"/>
     <android.support.v7.widget.RecyclerView

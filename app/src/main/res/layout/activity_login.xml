@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/login_background"
-    tools:context="com.kaicom.mymvptest.activity.LoginActivity">
+    tools:context="com.kaicom.mymvptest.ui.activity.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

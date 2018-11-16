@@ -1,4 +1,4 @@
-package com.kaicom.mymvptest.activity;
+package com.kaicom.mymvptest.ui.activity;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;

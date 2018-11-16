@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.kaicom.mymvptest.widget.StatusBarView;
+import com.kaicom.mymvptest.ui.widget.StatusBarView;
 
 
 /**

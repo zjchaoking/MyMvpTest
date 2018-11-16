@@ -1,4 +1,4 @@
-package com.kaicom.mymvptest.activity;
+package com.kaicom.mymvptest.ui.activity;
 
 import android.content.DialogInterface;
 import android.graphics.Rect;
@@ -13,8 +13,8 @@ import com.kaicom.api.util.DateUtil;
 import com.kaicom.api.util.FileUtil;
 import com.kaicom.api.view.dialog.DialogTools;
 import com.kaicom.mymvptest.R;
-import com.kaicom.mymvptest.adapters.AbsRecyclerViewAdapter;
-import com.kaicom.mymvptest.adapters.TranceRecordsRecyclerViewAdapter;
+import com.kaicom.mymvptest.ui.adapters.AbsRecyclerViewAdapter;
+import com.kaicom.mymvptest.ui.adapters.TranceRecordsRecyclerViewAdapter;
 import com.kaicom.mymvptest.base.BaseActivity;
 import com.kaicom.mymvptest.datasource.TraceRecordsOper;
 import com.kaicom.mymvptest.datasource.entity.TraceRecordsEntity;
@@ -22,7 +22,6 @@ import com.kaicom.mymvptest.datasource.entity.TraceRecordsEntity;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 import static com.kaicom.mymvptest.files.AppConfigs.RECORD_INTERVAL_TIME;
 import static com.kaicom.mymvptest.files.AppConfigs.RECORD_PATH;

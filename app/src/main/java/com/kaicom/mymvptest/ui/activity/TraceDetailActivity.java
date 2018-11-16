@@ -1,4 +1,4 @@
-package com.kaicom.mymvptest.activity;
+package com.kaicom.mymvptest.ui.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;

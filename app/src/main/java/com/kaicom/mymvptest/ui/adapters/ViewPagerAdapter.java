@@ -1,4 +1,4 @@
-package com.kaicom.mymvptest.adapters;
+package com.kaicom.mymvptest.ui.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
