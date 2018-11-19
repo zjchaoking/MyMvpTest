@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.kaicom.mymvptest.R;
 import com.kaicom.mymvptest.datasource.TraceRecordsOper;
+import com.kaicom.mymvptest.ui.activity.MainMenuActivity;
 import com.kaicom.mymvptest.utils.DialogUtil;
 import com.kaicom.mymvptest.utils.StatusBarUtil;
 
@@ -38,7 +39,9 @@ public abstract class BaseActivity extends FragmentActivity {
         setContentView(getViewId());
         ButterKnife.bind(this);
         //设置状态栏透明
-        setStatusBarColor();
+        if(!(this instanceof MainMenuActivity)){
+            setStatusBarColor();
+        }
         traceRecordsOper = new TraceRecordsOper();
         initView();
         initListeners();

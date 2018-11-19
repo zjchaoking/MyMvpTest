@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kaicom.mymvptest.R;
+import com.kaicom.mymvptest.base.BaseFragment;
 import com.kaicom.mymvptest.inerface.OnFragmentInteractionListener;
 
 /**
@@ -19,7 +20,7 @@ import com.kaicom.mymvptest.inerface.OnFragmentInteractionListener;
  * Use the {@link IndexFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class IndexFragment extends Fragment {
+public class IndexFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -60,13 +61,15 @@ public class IndexFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_index, container, false);
+        View view = inflater.inflate(R.layout.fragment_index, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
