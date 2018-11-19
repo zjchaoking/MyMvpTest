@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.kaicom.mymvptest.amap.TraceAsset.saveLocationsData;
-import static com.kaicom.mymvptest.files.AppConfigs.TRACE_RECORD_PATH;
+import static com.kaicom.mymvptest.files.AppContants.TRACE_RECORD_PATH;
 
 public class MapActivity extends BaseActivity implements AMap.OnMapLoadedListener, LocationSource,
         AMapLocationListener {

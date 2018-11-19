@@ -11,8 +11,10 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kaicom.api.util.StringUtil;
 import com.kaicom.mymvptest.R;
 import com.kaicom.mymvptest.datasource.TraceRecordsOper;
+import com.kaicom.mymvptest.files.FilePreference;
 import com.kaicom.mymvptest.ui.activity.MainMenuActivity;
 import com.kaicom.mymvptest.utils.DialogUtil;
 import com.kaicom.mymvptest.utils.StatusBarUtil;
@@ -28,6 +30,7 @@ public abstract class BaseActivity extends FragmentActivity {
     private ImageView ivBack;//头部返回按钮
     private TextView tvTitle,tvRightText;
     protected TraceRecordsOper traceRecordsOper;
+    protected FilePreference filePreference;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,11 +46,19 @@ public abstract class BaseActivity extends FragmentActivity {
             setStatusBarColor();
         }
         traceRecordsOper = new TraceRecordsOper();
+        filePreference = FilePreference.getInstance();
         initView();
         initListeners();
         init();
     }
 
+    /**
+     * 判断是否已登录
+     * @return
+     */
+    public static boolean isLogin(){
+        return !StringUtil.isEmpty(FilePreference.getInstance().getNickname());
+    }
     private void initListeners() {
         if(ivBack!=null){
             ivBack.setOnClickListener(new View.OnClickListener() {

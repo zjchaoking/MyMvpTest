@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/tweenty"
     android:orientation="vertical"
     tools:context="com.kaicom.mymvptest.ui.activity.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/forty"
-        android:layout_margin="@dimen/tweenty_eight"
         android:gravity="center"
         android:orientation="horizontal">
         <ImageView
@@ -31,7 +31,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/forty"
-        android:layout_margin="@dimen/tweenty_eight"
         android:gravity="center"
         android:orientation="horizontal">
         <ImageView
@@ -50,27 +49,67 @@
             />
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/forty_four"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_nickname"
+            />
+        <EditText
+            android:id="@+id/et_nickname"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:hint="请输入用户昵称"
+            android:layout_height="match_parent"
+            style="@style/CommonEditViewStyle"
+            />
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/forty_four"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_email"
+            />
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:inputType="textEmailAddress"
+            android:hint="请输入邮箱地址"
+            android:layout_height="match_parent"
+            style="@style/CommonEditViewStyle"
+            />
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fifty"
         android:gravity="center"
         android:orientation="horizontal">
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="@dimen/one_hundred"
-        android:layout_height="wrap_content"
-        style="@style/CommonButtonStyle"
-        android:text="登录"/>
 
         <Button
             android:id="@+id/btn_register"
-            android:layout_marginLeft="@dimen/ten"
             android:layout_width="@dimen/one_hundred"
             android:layout_height="wrap_content"
             style="@style/CommonButtonStyle"
             android:text="立即注册"/>
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_width="@dimen/one_hundred"
+            android:layout_height="wrap_content"
+            style="@style/CommonButtonStyle"
+            android:text="已有账号登录"/>
 
     </LinearLayout>
 

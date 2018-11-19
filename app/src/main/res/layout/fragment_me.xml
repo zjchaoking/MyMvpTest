@@ -1,15 +1,126 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-
-    <include layout="@layout/head_layout"/>
-    <TextView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+   <include layout="@layout/top_view"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="@dimen/fifty"
-        android:text="fefejejkf;aj" />
+        android:layout_height="@dimen/two_hundred"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/iv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_icon"/>
+        <LinearLayout
+            android:id="@+id/ll_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tweenty"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tweenty"
+                android:text="注册/登录" />
+            <TextView
+                android:id="@+id/tv_synopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ten"
+                android:text="登录后即可体验更多服务" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v7.widget.CardView
+        android:layout_margin="@dimen/five"
+        android:id="@+id/cv_upgrade"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        app:cardCornerRadius="@dimen/five"
+        app:cardElevation="@dimen/five"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_margin="@dimen/five"
+                android:layout_width="@dimen/tweenty"
+                android:layout_height="match_parent"
+                android:src="@mipmap/upgrade"/>
+            <TextView
+                android:textSize="@dimen/tweenty"
+                android:text="检测更新"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/fourteen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_margin="@dimen/five"
+        android:id="@+id/cv_version"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        app:cardCornerRadius="@dimen/five"
+        app:cardElevation="@dimen/five"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_margin="@dimen/five"
+                android:layout_width="@dimen/tweenty"
+                android:layout_height="match_parent"
+                android:src="@mipmap/version"/>
+            <TextView
+                android:textSize="@dimen/tweenty"
+                android:text="版本号"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/fourteen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_margin="@dimen/five"
+        android:id="@+id/cv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        app:cardCornerRadius="@dimen/five"
+        app:cardElevation="@dimen/five"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_margin="@dimen/five"
+                android:layout_width="@dimen/tweenty"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_logout"/>
+            <TextView
+                android:textSize="@dimen/tweenty"
+                android:text="注销"
+                android:textColor="@color/red"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/fourteen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 </LinearLayout>

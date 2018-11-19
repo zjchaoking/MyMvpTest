@@ -37,9 +37,9 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static com.kaicom.mymvptest.files.AppConfigs.LOCATION_PERMISSION_CODE;
-import static com.kaicom.mymvptest.files.AppConfigs.STORAGE_PERMISSION_CODE;
-import static com.kaicom.mymvptest.files.AppConfigs.TRACE_RECORD_PATH;
+import static com.kaicom.mymvptest.files.AppContants.LOCATION_PERMISSION_CODE;
+import static com.kaicom.mymvptest.files.AppContants.STORAGE_PERMISSION_CODE;
+import static com.kaicom.mymvptest.files.AppContants.TRACE_RECORD_PATH;
 
 public class MainsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

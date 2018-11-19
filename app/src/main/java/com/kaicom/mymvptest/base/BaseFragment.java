@@ -1,6 +1,7 @@
 package com.kaicom.mymvptest.base;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,12 +15,15 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.kaicom.mymvptest.R;
+import com.kaicom.mymvptest.files.FilePreference;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class BaseFragment extends Fragment {
 
+
+    protected FilePreference filePreference;
 
     public BaseFragment() {
         // Required empty public constructor
@@ -35,7 +39,7 @@ public class BaseFragment extends Fragment {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.TRANSPARENT);
         }
-
+        filePreference = FilePreference.getInstance();
     }
 
     @Override
@@ -47,4 +51,21 @@ public class BaseFragment extends Fragment {
         return textView;
     }
 
+    /**
+     * 跳转Activity界面
+     * @param cls
+     */
+    protected void toNextActivity(Class cls) {
+        Intent intent = new Intent(getActivity(), cls);
+        startActivity(intent);
+    }
+    /**
+     * 跳转Activity界面
+     * @param cls
+     */
+    protected void toNextActivityWithBundle(Class cls,Bundle bundle) {
+        Intent intent = new Intent(getActivity(), cls);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 }

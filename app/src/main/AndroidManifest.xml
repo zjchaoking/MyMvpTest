@@ -46,7 +46,8 @@
         <activity android:name=".ui.activity.TraceRecordsActivity" />
         <activity android:name=".ui.activity.TraceDetailActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
-        <activity android:name=".ui.activity.MainMenuActivity"/>
+        <activity android:name=".ui.activity.MainMenuActivity" />
+        <activity android:name=".ui.activity.RegisterActivity"></activity>
     </application>
 
 </manifest>

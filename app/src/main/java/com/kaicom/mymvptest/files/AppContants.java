@@ -8,7 +8,7 @@ import static com.kaicom.mymvptest.MyMvpApplication.LOG_PATH;
  * Created by jc on 2017/9/4.
  */
 
-public class AppConfigs {
+public class AppContants {
     /**
      * 运动轨迹记录文件的路径常量
      */
@@ -30,4 +30,12 @@ public class AppConfigs {
      * 保存运动轨迹记录文件夹
      */
     public static final String TRACE_RECORD_PATH = LOG_PATH + File.separator+"TraceRecords";
+    /**
+     * 昵称
+     */
+    public static final String NICK_NAME = "NICK_NAME";
+    /**
+     * 用户简介
+     */
+    public static final String USER_SYNOPSIS = "USER_SYNOPSIS";
 }

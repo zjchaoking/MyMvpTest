@@ -4,10 +4,10 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.kaicom.api.KaicomApplication;
 import com.kaicom.api.util.FileUtil;
-import com.kaicom.mymvptest.ui.activity.LoginActivity;
 import com.kaicom.mymvptest.datasource.DataSourceHelper;
 import com.kaicom.mymvptest.datasource.gen.DaoMaster;
 import com.kaicom.mymvptest.datasource.gen.DaoSession;
+import com.kaicom.mymvptest.ui.activity.MainMenuActivity;
 
 import java.io.File;
 
@@ -64,7 +64,7 @@ public class MyMvpApplication extends KaicomApplication {
 
     @Override
     public Class<?> getFirstActivity() {
-        return LoginActivity.class;
+        return MainMenuActivity.class;
     }
 
     public DaoMaster getDaoMaster() {

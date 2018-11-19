@@ -33,8 +33,8 @@ import java.util.List;
 import butterknife.BindView;
 
 import static com.kaicom.api.util.StringUtil.getFloatWithTwo;
-import static com.kaicom.mymvptest.files.AppConfigs.RECORD_INTERVAL_TIME;
-import static com.kaicom.mymvptest.files.AppConfigs.RECORD_PATH;
+import static com.kaicom.mymvptest.files.AppContants.RECORD_INTERVAL_TIME;
+import static com.kaicom.mymvptest.files.AppContants.RECORD_PATH;
 
 /**
  * 展示行程轨迹详情页面

@@ -23,8 +23,8 @@ import java.util.List;
 
 import butterknife.BindView;
 
-import static com.kaicom.mymvptest.files.AppConfigs.RECORD_INTERVAL_TIME;
-import static com.kaicom.mymvptest.files.AppConfigs.RECORD_PATH;
+import static com.kaicom.mymvptest.files.AppContants.RECORD_INTERVAL_TIME;
+import static com.kaicom.mymvptest.files.AppContants.RECORD_PATH;
 
 /**
  * 我的行程

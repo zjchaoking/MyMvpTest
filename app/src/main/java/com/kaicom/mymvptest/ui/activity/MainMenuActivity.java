@@ -6,12 +6,13 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
 
+import com.kaicom.api.util.ApkUtil;
 import com.kaicom.mymvptest.R;
-import com.kaicom.mymvptest.ui.adapters.ViewPagerAdapter;
 import com.kaicom.mymvptest.base.BaseActivity;
+import com.kaicom.mymvptest.inerface.OnFragmentInteractionListener;
+import com.kaicom.mymvptest.ui.adapters.ViewPagerAdapter;
 import com.kaicom.mymvptest.ui.fragment.IndexFragment;
 import com.kaicom.mymvptest.ui.fragment.MeFragment;
-import com.kaicom.mymvptest.inerface.OnFragmentInteractionListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,4 +101,9 @@ public class MainMenuActivity extends BaseActivity implements OnFragmentInteract
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        ApkUtil.exit();
+    }
 }
